@@ -26,17 +26,17 @@ function atualizarInterface() {
 
 function proximoSlide() {
     slideAtual = (slideAtual + 1) % slides.length;
-    atualizerInterface();
+    atualizarInterface();
 }
 
 function slideAnterior() {
     slideAtual = (slideAtual - 1 + slides.length) % slides.length;
-    atualizerInterface();
+    atualizarInterface();
 }
 
 function moverParaSlide(index) {
     slideAtual = index;
-    atualizerInterface();
+    atualizarInterface();
     reiniciarAutoPlay();
 }
 
@@ -59,6 +59,7 @@ function reiniciarAutoPlay() {
     iniciarAutoPlay();
 }
 
+
 iniciarAutoPlay();
 
 const btnTopo = document.getElementById('btn-topo');
@@ -66,8 +67,8 @@ const primeiraSecao = document.getElementById('detalhe-maquina');
 
 window.addEventListener('scroll', () => {
     if (primeiraSecao) {
-        const topoSecao = primeiraSecao.getBoundingClientRect().top;
-        if (topoSecao <= 50) {
+        const posicaoSecao = primeiraSecao.getBoundingClientRect().top + window.scrollY;
+        if (window.scrollY >= posicaoSecao) {
             btnTopo.style.display = 'block';
         } else {
             btnTopo.style.display = 'none';
@@ -81,3 +82,4 @@ btnTopo.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+iniciarAutoPlay();
