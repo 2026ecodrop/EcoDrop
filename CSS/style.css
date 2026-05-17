@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -33,11 +33,7 @@ body {
 .menu ul {
     list-style: none;
     display: flex;
-<<<<<<< HEAD
-    gap: 50px;
-=======
-    gap: 15px;
->>>>>>> 713efa0954e10f49b7adfe5f8bccb67e8597a368
+    gap: 40px;
 }
 
 .menu a {
@@ -66,22 +62,12 @@ body {
     color: white;
 }
 
-
-/*--------------------------------------- */
-/*Parte do Banner */
-/*--------------------------------------- */
-
-
 .container-banner {
     width: 95%;
     max-width: 1200px;
     margin: 10px auto;
     padding: 20px;
-<<<<<<< HEAD
-    background-color: rgba(136, 117, 66, 0.5);
-=======
     background-color: #bdbdbd;
->>>>>>> 713efa0954e10f49b7adfe5f8bccb67e8597a368
     position: relative;
     overflow: hidden;
     border-radius: 5px;
@@ -95,16 +81,10 @@ body {
 .carousel-image {
     width: 100%;
     flex-shrink: 0;
-<<<<<<< HEAD
-    height: 500px;
-    object-fit: cover; 
-    object-position: center;
-    padding: 0 20px; 
-=======
-    height: auto;
+    height: 400px;
     object-fit: cover;
-    padding: 20px;
->>>>>>> 713efa0954e10f49b7adfe5f8bccb67e8597a368
+    object-position: center;
+    padding: 0 20px;
 }
 
 .seta {
@@ -143,13 +123,6 @@ body {
     border-color: #000000;
 }
 
-
-
-/*--------------------------------------- */
-/*Parte do texto abaixo do banner */
-/*--------------------------------------- */
-
-
 .divisor {
     border: none;
     height: 5px;
@@ -160,13 +133,8 @@ body {
 }
 
 .containerTexto {
-<<<<<<< HEAD
-    background-color: rgba(116, 166, 231, 0.2);
-    color: black;
-=======
-    background-color: #555555;
-    color: white;
->>>>>>> 713efa0954e10f49b7adfe5f8bccb67e8597a368
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     width: 95%;
     max-width: 1200px;
     margin: 20px auto;
@@ -192,24 +160,13 @@ body {
     font-weight: bold;
 }
 
-
-
-/*--------------------------------------- */
-/*cards dos metodos para economizar */
-/*--------------------------------------- */
-
-
 .secao-metodos {
     width: 95%;
     max-width: 1200px;
-<<<<<<< HEAD
     margin: 50px auto;
     height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
-=======
-    margin: 20px auto;
->>>>>>> 713efa0954e10f49b7adfe5f8bccb67e8597a368
 }
 
 .titulo-metodos {
@@ -220,8 +177,6 @@ body {
     border-radius: 5px;
     margin-bottom: 30px;
 }
-
-<<<<<<< HEAD
 
 .grid-cards {
     display: flex;
@@ -235,8 +190,6 @@ body {
     padding-right: 10px;
 }
 
-
-
 .grid-cards::-webkit-scrollbar {
     width: 6px;
 }
@@ -244,39 +197,23 @@ body {
 .grid-cards::-webkit-scrollbar-thumb {
     background: #0067A7;
     border-radius: 10px;
-=======
-.grid-cards {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
->>>>>>> 713efa0954e10f49b7adfe5f8bccb67e8597a368
 }
 
 .card-equipamento {
     background-color: #d9d9d9;
-<<<<<<< HEAD
     flex: 0 1 calc(33.333% - 20px);
     max-width: 380px;
     min-width: 280px;
     height: calc(100% - 20px);
     max-height: 450px;
-=======
-    flex: 1;
-    max-width: 380px;
-    min-height: 350px; 
-    padding: 25px;
->>>>>>> 713efa0954e10f49b7adfe5f8bccb67e8597a368
     border-radius: 5px;
     position: relative;
     text-decoration: none;
     color: inherit;
     display: block;
     transition: transform 0.2s;
-<<<<<<< HEAD
     scroll-snap-align: start;
     overflow: hidden;
-=======
->>>>>>> 713efa0954e10f49b7adfe5f8bccb67e8597a368
 }
 
 .card-equipamento:hover {
@@ -284,7 +221,6 @@ body {
 }
 
 .card-equipamento h3 {
-<<<<<<< HEAD
     position: absolute;
     top: 20px;
     left: 0;
@@ -299,32 +235,16 @@ body {
 .conteudo-card {
     width: 100%;
     height: 100%;
-=======
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 20px;
-}
-
-.conteudo-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f0f0f0;
-    padding: 15px;
-    border-radius: 5px;
-    height: 220px; 
-    overflow: hidden;
->>>>>>> 713efa0954e10f49b7adfe5f8bccb67e8597a368
     position: relative;
 }
 
 .conteudo-card img {
-<<<<<<< HEAD
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
+
 .barra-info {
     position: absolute;
     bottom: -50%;
@@ -338,25 +258,6 @@ body {
     justify-content: center;
     pointer-events: none;
     z-index: 10;
-=======
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-}
-
-.barra-info {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 10px;
-    background-color: #5155cb;
-    transition: width 0.4s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none; 
->>>>>>> 713efa0954e10f49b7adfe5f8bccb67e8597a368
 }
 
 .barra-info p {
@@ -364,37 +265,22 @@ body {
     font-size: 15px;
     padding: 20px;
     opacity: 0;
-<<<<<<< HEAD
     transition: opacity 0.3s ease;
-=======
-    transition: opacity 0.2s ease;
->>>>>>> 713efa0954e10f49b7adfe5f8bccb67e8597a368
     text-align: center;
     font-weight: bold;
 }
 
 .card-equipamento:hover .barra-info {
-<<<<<<< HEAD
     bottom: 0;
-=======
-    width: 85%; 
->>>>>>> 713efa0954e10f49b7adfe5f8bccb67e8597a368
 }
 
 .card-equipamento:hover .barra-info p {
     opacity: 1;
 }
 
-
-/*--------------------------------------*/
-/* parte explicativa dos cards */
-/*--------------------------------------*/
-
 html {
     scroll-behavior: smooth;
 }
-
-<<<<<<< HEAD
 
 .secao-detalhe {
     width: 95%;
@@ -405,28 +291,14 @@ html {
     justify-content: flex-start;
     align-items: center;
     padding: 60px 40px;
-    background-color: rgba(136, 117, 66, 0.5);
+    background-color: rgba(161, 113, 23, 0.3);
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 1);
     box-sizing: border-box;
-    margin: 50px auto;
-    color: white;
-=======
-.secao-detalhe {
-    width: 95%;
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 40px;
-    background-color: #bac6fd;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
->>>>>>> 713efa0954e10f49b7adfe5f8bccb67e8597a368
+    margin: 120px auto;
 }
 
 .secao-detalhe h1 {
     color: #0067A7;
-<<<<<<< HEAD
     margin-bottom: 40px;
     font-size: 36px;
     text-transform: uppercase;
@@ -446,14 +318,6 @@ html {
 
 .texto-explicativo {
     width: 100%;
-=======
-    margin-bottom: 30px;
-    font-size: 32px;
-    text-transform: uppercase;
-}
-
-.texto-explicativo {
->>>>>>> 713efa0954e10f49b7adfe5f8bccb67e8597a368
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
@@ -462,78 +326,83 @@ html {
 .texto-explicativo p {
     font-size: 18px;
     line-height: 1.6;
-<<<<<<< HEAD
-    color: #ffffff;
-    margin-bottom: 25px;
-    text-align: center;
-}
-.texto-explicativo h3 {
-    color: #0067A7;
-    margin-top: 20px;
-    margin-bottom: 10px;
-=======
     color: #333;
     margin-bottom: 25px;
     text-align: center;
 }
 
 .texto-explicativo h3 {
-    color: #070707;
-    margin-bottom: 20px;
+    color: #0067A7;
+    margin-top: 20px;
+    margin-bottom: 10px;
     font-size: 22px;
->>>>>>> 713efa0954e10f49b7adfe5f8bccb67e8597a368
 }
 
 .texto-explicativo ul {
     list-style: none;
-<<<<<<< HEAD
     padding-left: 0;
 }
 
 .texto-explicativo li {
-    margin-bottom: 10px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 15px;
     position: relative;
 }
 
+.imagem-explicativa {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .imagem-explicativa img {
-    width: 900px;
-    height: auto;
-    margin-top: 50px;
-    max-height: 500px;
+    width: 800px;
+    height: 400px;
+    
     object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.imagem-explicativa img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
+
+
+
+
 
 .botao-subir {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #0067A7;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
     border: none;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 22px;
     cursor: pointer;
     display: none;
     z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s, transform 0.2s;
+    line-height: 50px;
+    text-align: center;
     transform: rotate(90deg);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s;
+    background-color: #0067A7;
 }
 
 .botao-subir:hover {
     background-color: #5155cb;
+    transform: rotate(90deg);
 }
+
+
+
+
+
 
 .rodape {
     background-color: #0067A7;
@@ -603,21 +472,4 @@ html {
         align-items: center;
     }
 }
-=======
-}
 
-.texto-explicativo li {
-    font-size: 17px;
-    line-height: 1.6;
-    color: #444;
-    margin-bottom: 15px;
-    padding-left: 20px;
-    position: relative;
-}
-
-.texto-explicativo li::before {
-    content: "💧";
-    position: absolute;
-    left: -10px;
-}
->>>>>>> 713efa0954e10f49b7adfe5f8bccb67e8597a368
