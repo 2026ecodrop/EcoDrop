@@ -15,6 +15,7 @@ body {
     display: flex;
     align-items: center;
     height: 80px;
+    line-height: 0;
 }
 
 .logo img {
@@ -22,6 +23,11 @@ body {
     background-color: white;
     padding: 5px;
     border-radius: 5px;
+    display: block; 
+}
+
+.logo a {
+    text-decoration: none;
 }
 
 .menu {
@@ -558,6 +564,10 @@ body {
     color: #d9d9d9;
 }
 
+.menu-hamburger {
+    display: none;
+}
+
 @media (max-width: 900px) {
     .inovacoes-intro {
         grid-template-columns: 1fr;
@@ -596,19 +606,69 @@ body {
 }
 
 @media (max-width: 768px) {
-
     .cabecalho {
-        flex-direction: column;
-        height: auto;
+        position: relative;
+        justify-content: center !important; 
+        flex-direction: row !important; 
+        height: 80px;
         padding: 16px 20px;
-        gap: 12px;
-        text-align: center;
+    }
+
+    .menu-hamburger {
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 29px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 100;
+        padding: 0;
+    }
+
+    .menu-hamburger .bar {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background-color: #ffffff;
+        margin: 6px 0;
+        border-radius: 3px;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .menu ul {
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100vh;
+        background-color: #0067A7;
+        padding-top: 90px;
+        gap: 20px;
+        box-shadow: 4px 0 10px rgba(0,0,0,0.3);
+        z-index: 99;
+        transition: left 0.3s ease;
+        margin: 0;
+    }
+
+    .menu ul.menu-ativo {
+        left: 0;
+    }
+
+    .menu a {
+        display: block;
+        text-align: left;
+        width: 85%;
+        margin: 0 auto;
+        padding: 12px 20px;
+        border-radius: 5px;
     }
 
     .introducao-conteudo {
