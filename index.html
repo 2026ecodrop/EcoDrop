@@ -3,22 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoDrop</title>
     <link rel="stylesheet" href="CSS/style.css">
-    
-
 </head>
 
 <body>
 
     <header class="cabecalho">
+        <button class="menu-hamburger" id="btn-hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
         <div class="logo">
-            <a href="../index.html"> <img src="imagens/logo.png" alt="Logo EcoDrop"></a>
+            <a href="index.html"><img src="imagens/logo.png" alt="Logo EcoDrop"></a>
         </div>
 
         <nav class="menu">
-            <ul>
-                <li id="home"><a href="../index.html">Home</a></li>
+            <ul id="menu-lista">
+                <li id="home"><a href="index.html">Home</a></li>
                 <li><a href="paginas/sobre.html">Sobre</a></li>
                 <li><a href="paginas/economizar.html">Economizar</a></li>
                 <li><a href="paginas/contato.html">Contato</a></li>
@@ -31,12 +36,35 @@
         <button class="seta seta-dir" id="btn-next">&#10095;</button>
 
         <div class="carousel-track" id="track">
-            <img src="imagens/banner1.png" alt="Banner 1" class="carousel-image">
-            <img src="imagens/banner2.png" alt="Banner 2" class="carousel-image">
-            <img src="imagens/banner3.png" alt="Banner 3" class="carousel-image">
-            <img src="imagens/banner4.png" alt="Banner 4" class="carousel-image">
-            <img src="imagens/banner5.png" alt="Banner 5" class="carousel-image">
-            <img src="imagens/banner6.png" alt="Banner 6" class="carousel-image">
+            <picture class="slide-banner">
+                <source media="(max-width: 768px)" srcset="imagens/banner1.jpg">
+                <img src="imagens/banner1.jpg" alt="Banner 1" class="carousel-image">
+            </picture>
+
+            <picture class="slide-banner">
+                <source media="(max-width: 768px)" srcset="imagens/banner1.png">
+                <img src="imagens/banner2.jpg" alt="Banner 2" class="carousel-image">
+            </picture>
+
+            <picture class="slide-banner">
+                <source media="(max-width: 768px)" srcset="imagens/banner1.png">
+                <img src="imagens/banner3.jpg" alt="Banner 3" class="carousel-image">
+            </picture>
+
+            <picture class="slide-banner">
+                <source media="(max-width: 768px)" srcset="imagens/banner4-celular.png">
+                <img src="imagens/banner4.jpg" alt="Banner 4" class="carousel-image">
+            </picture>
+
+            <picture class="slide-banner">
+                <source media="(max-width: 768px)" srcset="imagens/banner5-celular.png">
+                <img src="imagens/banner5.jpg" alt="Banner 5" class="carousel-image">
+            </picture>
+
+            <picture class="slide-banner">
+                <source media="(max-width: 768px)" srcset="imagens/banner6-celular.png">
+                <img src="imagens/banner6.png" alt="Banner 6" class="carousel-image">
+            </picture>
         </div>
 
         <div class="indicadores" id="indicadores"></div>
@@ -83,7 +111,6 @@
     </div>
 
     <hr class="divisor">
-
 
     <div class="secao-metodos">
         <div class="titulo-metodos">
@@ -214,7 +241,6 @@
         </div>
     </div>
 
-
     <div class="secao-detalhe" id="detalhe-maquina">
         <h1>Máquina de Lavar</h1>
         <div class="texto-explicativo">
@@ -232,8 +258,6 @@
         </div>
     </div>
     
-
-
     <div class="secao-detalhe" id="detalhe-louca">
         <h1>Máquina de Lavar Louça</h1>
         <div class="texto-explicativo">
@@ -309,7 +333,6 @@
         </div>
     </div>
 
-
     <div class="secao-detalhe" id="detalhe-torneira">
         <h1>Torneiras</h1>
         <div class="conteudo-detalhe">
@@ -330,7 +353,6 @@
         </div>
     </div>
 
-
     <div class="secao-detalhe" id="detalhe-vaso">
         <h1>Vaso Sanitário</h1>
         <div class="conteudo-detalhe">
@@ -349,7 +371,6 @@
             </div>
         </div>
     </div>
-
 
     <div class="secao-detalhe" id="detalhe-jardim">
         <h1>Rega de Jardim</h1>
@@ -370,7 +391,6 @@
             </div>
         </div>
     </div>
-
 
     <div class="secao-detalhe" id="detalhe-calcada">
         <h1>Limpeza de Calçadas</h1>
@@ -412,7 +432,6 @@
         </div>
     </div>
 
-
     <div class="secao-detalhe" id="detalhe-vazamento">
         <h1>Vazamentos</h1>
         <div class="conteudo-detalhe">
@@ -433,7 +452,6 @@
         </div>
     </div>
 
-
     <div class="secao-detalhe" id="detalhe-piscina">
         <h1>Manutenção de Piscina</h1>
         <div class="conteudo-detalhe">
@@ -453,8 +471,6 @@
             </div>
         </div>
     </div>
-    <button id="btn-topo" class="botao-subir">&#10094;</button>
-
 
     <footer class="rodape">
         <div class="conteudo-rodape">
@@ -465,7 +481,7 @@
             <div class="rodape-links">
                 <h4>Navegação</h4>
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="paginas/sobre.html">Sobre</a></li>
                     <li><a href="paginas/economizar.html">Economizar</a></li>
                     <li><a href="paginas/contato.html">Contato</a></li>
