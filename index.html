@@ -4,223 +4,475 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoDrop – Sobre</title>
-    <link rel="stylesheet" href="../CSS/stylesobre.css">
-    <link rel ="stylesheet" href="../CSS/style.css">
+    <title>EcoDrop</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
 
-    <!-- ═══════════════════════ CABEÇALHO ═══════════════════════ -->
-<header class="cabecalho">
-    <button class="menu-hamburger" id="btn-hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </button>
+    <header class="cabecalho">
+        <button class="menu-hamburger" id="btn-hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
 
-    <div class="logo">
-        <a href="../index.html"> <img src="../imagens/logo.png" alt="Logo EcoDrop"></a>
-    </div>
+        <div class="logo">
+            <a href="index.html"><img src="imagens/logo.png" alt="Logo EcoDrop"></a>
+        </div>
 
-    <nav class="menu">
-        <ul id="menu-lista">
-            <li><a href="../index.html">Home</a></li>
-            <li id="sobre"><a href="sobre.html">Sobre</a></li>
-            <li><a href="economizar.html">Economizar</a></li>
-            <li><a href="contato.html">Contato</a></li>
+        <nav class="menu">
+            <ul id="menu-lista">
+                <li id="home"><a href="index.html">Home</a></li>
+                <li><a href="paginas/sobre.html">Sobre</a></li>
+                <li><a href="paginas/economizar.html">Economizar</a></li>
+                <li><a href="paginas/contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container-banner">
+        <button class="seta seta-esq" id="btn-prev">&#10094;</button>
+        <button class="seta seta-dir" id="btn-next">&#10095;</button>
+
+        <div class="carousel-track" id="track">
+            <picture class="slide-banner">
+                <source media="(max-width: 768px)" srcset="imagens/banner1.jpg">
+                <img src="imagens/banner1.jpg" alt="Banner 1" class="carousel-image">
+            </picture>
+
+            <picture class="slide-banner">
+                <source media="(max-width: 768px)" srcset="imagens/banner2.jpg">
+                <img src="imagens/banner2.jpg" alt="Banner 2" class="carousel-image">
+            </picture>
+
+            <picture class="slide-banner">
+                <source media="(max-width: 768px)" srcset="imagens/banner3.jpg">
+                <img src="imagens/banner3.jpg" alt="Banner 3" class="carousel-image">
+            </picture>
+
+            <picture class="slide-banner">
+                <source media="(max-width: 768px)" srcset="imagens/banner4.jpg">
+                <img src="imagens/banner4.jpg" alt="Banner 4" class="carousel-image">
+            </picture>
+
+            <picture class="slide-banner">
+                <source media="(max-width: 768px)" srcset="imagens/banner5.jpg">
+                <img src="imagens/banner5.jpg" alt="Banner 5" class="carousel-image">
+            </picture>
+
+            <picture class="slide-banner">
+                <source media="(max-width: 768px)" srcset="imagens/banner6.png">
+                <img src="imagens/banner6.png" alt="Banner 6" class="carousel-image">
+            </picture>
+        </div>
+
+        <div class="indicadores" id="indicadores"></div>
+    </main>
+
+    <hr class="divisor">
+
+    <div class="containerTexto">
+        <h2>Porque Economizar?</h2>
+        <ul>
+            <li><span class="destaque-azul">Recurso Limitado:</span> Apenas uma pequena porcentagem da água da Terra é
+                potável (doce) e acessível, e o uso indevido pode esgotá-la.</li>
+            <br>
+            <li><span class="destaque-azul">Sustentabilidade e Futuro:</span> Evitar o desperdício é essencial para
+                garantir água para as próximas gerações e preservar o meio ambiente.</li>
+            <br>
+            <li><span class="destaque-azul">Custo e Tratamento:</span> A água que chega às torneiras passa por processos
+                caros de captação, tratamento e distribuição; desperdiçar água é desperdiçar dinheiro e energia.</li>
+            <br>
+            <li><span class="destaque-azul">Sobrevivência e Saúde:</span> A água é insubstituível para o consumo humano,
+                higiene, produção de alimentos e agricultura.</li>
+            <br>
+            <li><span class="destaque-azul">Mudanças Climáticas:</span> Em períodos de calor intenso e menos chuvas
+                (como o verão), a demanda aumenta, tornando a economia crucial para manter o equilíbrio dos
+                reservatórios.</li>
         </ul>
-    </nav>
-</header>
+    </div>
 
-    <!-- ═══════════════════════ HERO ═══════════════════════ -->
-    <section class="hero-sobre">
-        <div class="hero-sobre-conteudo">
-            <span class="hero-tag">Conheça o Projeto</span>
-            <h1>Sobre o <span class="destaque-azul">EcoDrop</span></h1>
-            <p>Uma iniciativa dedicada à conscientização sobre o uso responsável da água, promovendo hábitos sustentáveis para preservar o recurso mais precioso do planeta.</p>
-        </div>
-        <div class="hero-sobre-imagem">
-            <div class="circulo-agua">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <defs>
-                        <linearGradient id="gradAgua" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#2196F3;stop-opacity:0.9"/>
-                            <stop offset="100%" style="stop-color:#0D47A1;stop-opacity:0.9"/>
-                        </linearGradient>
-                    </defs>
-                    <path d="M100 20 C100 20, 155 80, 155 120 A55 55 0 0 1 45 120 C45 80, 100 20, 100 20Z"
-                          fill="url(#gradAgua)" opacity="0.95"/>
-                    <ellipse cx="82" cy="95" rx="10" ry="18" fill="white" opacity="0.25" transform="rotate(-20 82 95)"/>
-                </svg>
-            </div>
-        </div>
-    </section>
+    <div class="containerTexto">
+        <h2>Sustentabilidade:</h2>
+        <ul>
+            <li><span class="destaque-preto">Definição Central:</span> Suprir demandas presentes sem comprometer a
+                capacidade de gerações futuras satisfazerem as suas próprias (Conceito da ONU/1987).</li>
+            <br>
+            <li><span class="destaque-preto">Ambiental:</span> Preservação dos recursos naturais, conservação da
+                biodiversidade e gestão de resíduos.</li>
+            <br>
+            <li><span class="destaque-preto">Social:</span> Melhoria da qualidade de vida, equidade, ética e bem-estar
+                da população.</li>
+            <br>
+            <li><span class="destaque-preto">Econômico:</span> Crescimento econômico que respeita os limites do planeta
+                e promove consumo responsável.</li>
+        </ul>
+    </div>
 
     <hr class="divisor">
 
-    <!-- ═══════════════════════ O QUE É O ECODROP ═══════════════════════ -->
-    <div class="containerTexto">
-        <h2>O que é o EcoDrop?</h2>
-        <p>O <strong>EcoDrop</strong> é um projeto educacional criado para informar e engajar pessoas sobre a importância da conservação da água. Nosso objetivo é transformar conhecimento em ação, fornecendo dicas práticas, dados relevantes e ferramentas que ajudem cada cidadão a reduzir seu consumo hídrico diário.</p>
-        <p style="margin-top: 1rem;">Acreditamos que pequenas mudanças de hábito, quando adotadas em larga escala, geram um impacto gigantesco no futuro dos nossos recursos naturais. Cada gota poupada conta!</p>
+    <div class="secao-metodos">
+        <div class="titulo-metodos">
+            <h2>Métodos para Economizar</h2>
+        </div>
+
+        <div class="grid-cards">
+
+            <a href="#detalhe-maquina" class="card-equipamento">
+                <h3>Máquina de Lavar</h3>
+                <div class="conteudo-card">
+                    <img src="https://image.shutterstock.com/image-photo/girl-loads-dirty-things-into-260nw-1893919111.jpg"
+                        alt="Máquina de Lavar">
+                    <div class="barra-info">
+                        <p>Reaproveite a água para lavar o quintal.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#detalhe-louca" class="card-equipamento">
+                <h3>Máquina de Louça</h3>
+                <div class="conteudo-card">
+                    <img src="imagens/lavarlouca.webp" alt="Máquina de Louça">
+                    <div class="barra-info">
+                        <p>Use apenas com a capacidade total.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#detalhe-chuveiro" class="card-equipamento">
+                <h3>Chuveiro</h3>
+                <div class="conteudo-card">
+                    <img src="imagens/chuveiro.webp" alt="Chuveiro">
+                    <div class="barra-info">
+                        <p>Reduza o tempo de banho para 5 minutos.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#Eliminador-de-Ar" class="card-equipamento">
+                <h3>Eliminador de Ar</h3>
+                <div class="conteudo-card">
+                    <img src="imagens/eliminar.webp" alt="Chuveiro">
+                    <div class="barra-info">
+                        <p>Reduza o tempo de banho para 5 minutos.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#detalhe-chuva" class="card-equipamento">
+                <h3>Água da Chuva</h3>
+                <div class="conteudo-card">
+                    <img src="imagens/chuva.avif" alt="Captação de Chuva">
+                    <div class="barra-info">
+                        <p>Use calhas e cisternas para coletar água.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#detalhe-torneira" class="card-equipamento">
+                <h3>Torneiras</h3>
+                <div class="conteudo-card">
+                    <img src="imagens/torneira.avif" alt="Torneiras">
+                    <div class="barra-info">
+                        <p>Instale arejadores para reduzir o fluxo.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#detalhe-vaso" class="card-equipamento">
+                <h3>Vaso Sanitário</h3>
+                <div class="conteudo-card">
+                    <img src="imagens/vaso.jpeg" alt="Vaso Sanitário">
+                    <div class="barra-info">
+                        <p>Prefira caixas acopladas de duplo fluxo.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#detalhe-jardim" class="card-equipamento">
+                <h3>Rega de Jardim</h3>
+                <div class="conteudo-card">
+                    <img src="imagens/jardim.avif" alt="Rega de Jardim">
+                    <div class="barra-info">
+                        <p>Regue plantas de manhã ou no fim da tarde.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#detalhe-calcada" class="card-equipamento">
+                <h3>Limpeza de Calçadas</h3>
+                <div class="conteudo-card">
+                    <img src="imagens/vassoura.avif" alt="Limpeza de Calçadas">
+                    <div class="barra-info">
+                        <p>Troque a mangueira pela vassoura e balde.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#detalhe-carro" class="card-equipamento">
+                <h3>Lavagem de Carro</h3>
+                <div class="conteudo-card">
+                    <img src="imagens/carro.avif" alt="Lavagem de Carro">
+                    <div class="barra-info">
+                        <p>Use balde em vez de mangueira para lavar.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#detalhe-vazamento" class="card-equipamento">
+                <h3>Vazamentos</h3>
+                <div class="conteudo-card">
+                    <img src="imagens/vazamento.webp" alt="Vazamentos">
+                    <div class="barra-info">
+                        <p>Conserte pingos e pequenas infiltrações.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#detalhe-piscina" class="card-equipamento">
+                <h3>Manutenção de Piscina</h3>
+                <div class="conteudo-card">
+                    <img src="imagens/piscina.jpg" alt="Manutenção de Piscina">
+                    <div class="barra-info">
+                        <p>Use capas para evitar a evaporação da água.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
 
-    <!-- ═══════════════════════ MISSÃO / VISÃO / VALORES ═══════════════════════ -->
-    <section class="secao-mvv">
-        <div class="card-mvv">
-            <div class="icone-mvv">💧</div>
-            <h3>Missão</h3>
-            <p>Educar e conscientizar a sociedade sobre o uso racional da água, promovendo hábitos sustentáveis que preservem os recursos hídricos para as gerações presentes e futuras.</p>
+    <div class="secao-detalhe" id="detalhe-maquina">
+        <h1>Máquina de Lavar</h1>
+        <div class="texto-explicativo">
+            <p>A máquina de lavar roupas é um dos equipamentos que mais consome água. Reutilize o descarte para fins não
+                potáveis.</p>
+            <h3>Como armazenar e reutilizar:</h3>
+            <ul>
+                <li><span class="destaque-azul">Armazenamento:</span> Colete a água do último enxágue em baldes.</li>
+                <li><span class="destaque-azul">Limpeza:</span> Use para lavar quintais e calçadas.</li>
+            </ul>
         </div>
-        <div class="card-mvv destaque">
-            <div class="icone-mvv">🌍</div>
-            <h3>Visão</h3>
-            <p>Ser referência nacional em educação ambiental hídrica, contribuindo para um mundo onde a água potável seja acessível e preservada para todos os seres vivos.</p>
+        <div class="imagem-explicativa">
+            <img src="https://image.shutterstock.com/image-photo/girl-loads-dirty-things-into-260nw-1893919111.jpg"
+                alt="maquina">
         </div>
-        <div class="card-mvv">
-            <div class="icone-mvv">♻️</div>
-            <h3>Valores</h3>
-            <p>Sustentabilidade, responsabilidade ambiental, educação, transparência e engajamento comunitário guiam todas as nossas ações e conteúdos.</p>
+    </div>
+    
+    <div class="secao-detalhe" id="detalhe-louca">
+        <h1>Máquina de Lavar Louça</h1>
+        <div class="texto-explicativo">
+            <p>A lavagem mecanizada pode ser mais econômica que a manual se utilizada corretamente.</p>
+            <h3>Dicas de Sustentabilidade:</h3>
+            <ul>
+                <li><span class="destaque-azul">Capacidade:</span> Use apenas quando estiver totalmente cheia.</li>
+                <li><span class="destaque-azul">Modo Eco:</span> Priorize ciclos de baixo consumo.</li>
+            </ul>
         </div>
-    </section>
-
-    <hr class="divisor">
-
-    <!-- ═══════════════════════ DADOS IMPACTANTES ═══════════════════════ -->
-    <div class="containerTexto">
-        <h2>Por que isso importa?</h2>
+        <div class="imagem-explicativa">
+            <img src="imagens/lavarlouca.webp" alt="louça">
+        </div>
     </div>
 
-    <section class="secao-dados">
-        <div class="dado-item">
-            <span class="dado-numero">2,5%</span>
-            <p>da água da Terra é doce, e apenas <strong>0,3%</strong> está acessível para consumo humano direto.</p>
+    <div class="secao-detalhe" id="detalhe-chuveiro">
+        <h1>Chuveiro</h1>
+        <div class="conteudo-detalhe">
+            <div class="texto-explicativo">
+                <p>O banho é um dos maiores responsáveis pelo consumo residencial. Reduzir o tempo de uso gera economia
+                    imediata de água e energia.</p>
+                <h3>Práticas eficientes:</h3>
+                <ul>
+                    <li><span class="destaque-azul">Tempo:</span> Limite seu banho a no máximo 5 minutos.</li>
+                    <li><span class="destaque-azul">Controle:</span> Feche o registro enquanto se ensaboa ou lava o
+                        cabelo.</li>
+                </ul>
+            </div>
+            <div class="imagem-explicativa">
+                <img src="imagens/chuveiro.webp" alt="Eliminador-de-Ar">
+            </div>
         </div>
-        <div class="dado-item">
-            <span class="dado-numero">2 bi</span>
-            <p>de pessoas vivem em países que sofrem com <strong>estresse hídrico</strong> elevado (ONU, 2024).</p>
-        </div>
-        <div class="dado-item">
-            <span class="dado-numero">200 L</span>
-            <p>é o consumo médio diário por habitante no Brasil — acima do mínimo recomendado de <strong>110 L</strong>.</p>
-        </div>
-        <div class="dado-item">
-            <span class="dado-numero">40%</span>
-            <p>da água tratada é desperdiçada em vazamentos e mau uso nas residências brasileiras.</p>
-        </div>
-    </section>
-
-    <hr class="divisor">
-
-    <!-- ═══════════════════════ EQUIPE ═══════════════════════ -->
-    <div class="containerTexto">
-        <h2>Nossa Equipe</h2>
-        <p>Somos estudantes e entusiastas do meio ambiente que acreditam no poder da informação para transformar realidades.</p>
     </div>
 
-    <section class="secao-equipe">
-
-        <div class="card-membro">
-            <div class="avatar-membro">
-                <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <circle cx="40" cy="40" r="40" fill="#E3F2FD"/>
-                    <circle cx="40" cy="30" r="14" fill="#2196F3"/>
-                    <ellipse cx="40" cy="68" rx="22" ry="16" fill="#2196F3"/>
-                </svg>
+    <div class="secao-detalhe" id="Eliminador-de-Ar">
+        <h1>Eliminador de Ar</h1>
+        <div class="conteudo-detalhe">
+            <div class="texto-explicativo">
+                <p>Os eliminadores ou bloqueadores de ar são dispositivos vendidos com a promessa de reter o ar da
+                    tubulação antes que ele passe pelo relógio, reduzindo o valor cobrado na conta de água.</p>
+                <h3>Fatos importantes sobre o uso:</h3>
+                <ul>
+                    <li><span class="destaque-azul">Legislação:</span> Em grande parte do país, as concessionárias
+                        proíbem a instalação por considerar uma intervenção irregular no sistema de abastecimento.</li>
+                    <li><span class="destaque-azul">Eficácia:</span> Órgãos de defesa do consumidor apontam que a
+                        eficiência não é totalmente comprovada e que as redes públicas já costumam contar com válvulas
+                        de purga próprias.</li>
+                </ul>
             </div>
-            <h3>Ana Souza</h3>
-            <span class="cargo-membro">Fundadora &amp; Conteúdo</span>
-            <p>Bióloga apaixonada por recursos hídricos, responsável pela pesquisa e curadoria dos conteúdos do EcoDrop.</p>
-        </div>
-
-        <div class="card-membro">
-            <div class="avatar-membro">
-                <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <circle cx="40" cy="40" r="40" fill="#E8F5E9"/>
-                    <circle cx="40" cy="30" r="14" fill="#388E3C"/>
-                    <ellipse cx="40" cy="68" rx="22" ry="16" fill="#388E3C"/>
-                </svg>
+            <div class="imagem-explicativa">
+                <img src="imagens/eliminar.jpg" alt="Eliminador de Ar">
             </div>
-            <h3>Carlos Lima</h3>
-            <span class="cargo-membro">Desenvolvimento Web</span>
-            <p>Desenvolvedor front-end responsável pela criação e manutenção da plataforma EcoDrop.</p>
         </div>
-
-        <div class="card-membro">
-            <div class="avatar-membro">
-                <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <circle cx="40" cy="40" r="40" fill="#FFF8E1"/>
-                    <circle cx="40" cy="30" r="14" fill="#F9A825"/>
-                    <ellipse cx="40" cy="68" rx="22" ry="16" fill="#F9A825"/>
-                </svg>
-            </div>
-            <h3>Mariana Costa</h3>
-            <span class="cargo-membro">Design &amp; UX</span>
-            <p>Designer responsável pela identidade visual e pela experiência do usuário em todas as páginas do projeto.</p>
-        </div>
-
-    </section>
-
-    <hr class="divisor">
-
-    <!-- ═══════════════════════ LINHA DO TEMPO ═══════════════════════ -->
-    <div class="containerTexto">
-        <h2>Nossa Trajetória</h2>
     </div>
 
-    <section class="timeline">
-
-        <div class="timeline-item">
-            <div class="timeline-ponto"></div>
-            <div class="timeline-conteudo">
-                <span class="timeline-ano">2024</span>
-                <h3>Ideia e Pesquisa</h3>
-                <p>O projeto nasceu como trabalho acadêmico, motivado pela escassez hídrica crescente no Brasil e no mundo.</p>
+    <div class="secao-detalhe" id="detalhe-chuva">
+        <h1>Água da Chuva</h1>
+        <div class="conteudo-detalhe">
+            <div class="texto-explicativo">
+                <p>A captação pluvial reduz a demanda sobre as redes de tratamento público utilizando recursos naturais
+                    gratuitos.</p>
+                <h3>Como implementar:</h3>
+                <ul>
+                    <li><span class="destaque-azul">Estrutura:</span> Direcione as calhas do telhado para cisternas ou
+                        tambores protegidos.</li>
+                    <li><span class="destaque-azul">Utilização:</span> Aplique na rega de plantas, lavagem de pisos
+                        externos e descargas.</li>
+                </ul>
+            </div>
+            <div class="imagem-explicativa">
+                <img src="imagens/chuva.avif" alt="Detalhe Chuva">
             </div>
         </div>
+    </div>
 
-        <div class="timeline-item invertido">
-            <div class="timeline-ponto"></div>
-            <div class="timeline-conteudo">
-                <span class="timeline-ano">2025</span>
-                <h3>Desenvolvimento</h3>
-                <p>Início do desenvolvimento da plataforma web, com foco em acessibilidade, design responsivo e conteúdo de qualidade.</p>
+    <div class="secao-detalhe" id="detalhe-torneira">
+        <h1>Torneiras</h1>
+        <div class="conteudo-detalhe">
+            <div class="texto-explicativo">
+                <p>Uma torneira aberta despeja muitos litros por minuto sem necessidade, principalmente ao escovar
+                    dentes ou lavar louças.</p>
+                <h3>Ajustes simples:</h3>
+                <ul>
+                    <li><span class="destaque-azul">Tecnologia:</span> Instale arejadores nos bicos para misturar ar e
+                        diminuir a vazão.</li>
+                    <li><span class="destaque-azul">Hábito:</span> Mantenha a torneira fechada durante processos de
+                        esfregação.</li>
+                </ul>
+            </div>
+            <div class="imagem-explicativa">
+                <img src="imagens/torneira.avif" alt="Detalhe Torneira">
             </div>
         </div>
+    </div>
 
-        <div class="timeline-item">
-            <div class="timeline-ponto"></div>
-            <div class="timeline-conteudo">
-                <span class="timeline-ano">2026</span>
-                <h3>Lançamento Oficial</h3>
-                <p>O EcoDrop vai ao ar com sua primeira versão completa, reunindo dicas, dados e ferramentas de economia de água.</p>
+    <div class="secao-detalhe" id="detalhe-vaso">
+        <h1>Vaso Sanitário</h1>
+        <div class="conteudo-detalhe">
+            <div class="texto-explicativo">
+                <p>Modelos antigos de descarga gastam volumes desproporcionais de água tratada a cada acionamento.</p>
+                <h3>Soluções ecológicas:</h3>
+                <ul>
+                    <li><span class="destaque-azul">Mecanismo:</span> Utilize sistemas de duplo fluxo regulados para 3L
+                        e 6L.</li>
+                    <li><span class="destaque-azul">Manutenção:</span> Monitore vedações internas para impedir
+                        vazamentos silenciosos.</li>
+                </ul>
+            </div>
+            <div class="imagem-explicativa">
+                <img src="imagens/vaso.jpeg" alt="Detalhe Vaso">
             </div>
         </div>
+    </div>
 
-        <div class="timeline-item invertido">
-            <div class="timeline-ponto destaque-futuro"></div>
-            <div class="timeline-conteudo futuro">
-                <span class="timeline-ano">Futuro</span>
-                <h3>Expansão</h3>
-                <p>Planejamos expandir com calculadoras de consumo, gamificação e parcerias com ONGs e prefeituras.</p>
+    <div class="secao-detalhe" id="detalhe-jardim">
+        <h1>Rega de Jardim</h1>
+        <div class="conteudo-detalhe">
+            <div class="texto-explicativo">
+                <p>A irrigação inadequada faz com que grande parte da água evapore antes mesmo de atingir as raízes da
+                    vegetação.</p>
+                <h3>Planejamento verde:</h3>
+                <ul>
+                    <li><span class="destaque-azul">Horários:</span> Priorize o início da manhã ou o final da tarde para
+                        regar.</li>
+                    <li><span class="destaque-azul">Ferramentas:</span> Prefira regadores manuais ou sistemas
+                        automáticos por gotejamento.</li>
+                </ul>
+            </div>
+            <div class="imagem-explicativa">
+                <img src="imagens/jardim.avif" alt="Detalhe Jardim">
             </div>
         </div>
+    </div>
 
-    </section>
+    <div class="secao-detalhe" id="detalhe-calcada">
+        <h1>Limpeza de Calçadas</h1>
+        <div class="conteudo-detalhe">
+            <div class="texto-explicativo">
+                <p>Usar a força da água da mangueira para varrer folhas e poeira do chão é um hábito de alto
+                    desperdício.</p>
+                <h3>Alternativas limpas:</h3>
+                <ul>
+                    <li><span class="destaque-azul">Seco:</span> Faça a remoção de detritos grossos e folhas usando
+                        apenas a vassoura.</li>
+                    <li><span class="destaque-azul">Úmido:</span> Caso necessite lavar, utilize baldes abastecidos com
+                        água reutilizada.</li>
+                </ul>
+            </div>
+            <div class="imagem-explicativa">
+                <img src="imagens/vassoura.avif" alt="Detalhe Calçada">
+            </div>
+        </div>
+    </div>
 
-    <!-- ═══════════════════════ CTA ═══════════════════════ -->
-    <section class="secao-cta">
-        <h2>Faça parte dessa mudança</h2>
-        <p>Compartilhe o EcoDrop com amigos e família. Cada pessoa consciente é uma gota a mais no oceano da sustentabilidade.</p>
-        <a href="../contato/index.html" class="btn-cta">Entre em Contato</a>
-    </section>
+    <div class="secao-detalhe" id="detalhe-carro">
+        <h1>Lavagem de Carro</h1>
+        <div class="conteudo-detalhe">
+            <div class="texto-explicativo">
+                <p>Manter fluxos contínuos de mangueiras ligados enquanto esfrega veículos consome centenas de litros
+                    desnecessariamente.</p>
+                <h3>Técnicas sustentáveis:</h3>
+                <ul>
+                    <li><span class="destaque-azul">Utensílios:</span> Substitua linhas diretas por panos úmidos e
+                        baldes de água.</li>
+                    <li><span class="destaque-azul">Produtos:</span> Se possível, adote métodos de lavagem ecológica a
+                        seco.</li>
+                </ul>
+            </div>
+            <div class="imagem-explicativa">
+                <img src="imagens/carro.avif" alt="Detalhe Carro">
+            </div>
+        </div>
+    </div>
 
-    <!-- ═══════════════════════ BOTÃO TOPO ═══════════════════════ -->
-    <button id="btn-topo" class="botao-subir">&#10094;</button>
+    <div class="secao-detalhe" id="detalhe-vazamento">
+        <h1>Vazamentos</h1>
+        <div class="conteudo-detalhe">
+            <div class="texto-explicativo">
+                <p>Pequenos gotejamentos persistentes parecem inofensivos, mas acumulam desperdícios gigantescos ao
+                    longo dos meses.</p>
+                <h3>Prevenção ativa:</h3>
+                <ul>
+                    <li><span class="destaque-azul">Inspeção:</span> Verifique periodicamente manchas em paredes e
+                        conexões de encanamentos.</li>
+                    <li><span class="destaque-azul">Reparo:</span> Substitua borrachas de vedação (courinhos) assim que
+                        notar goteiras.</li>
+                </ul>
+            </div>
+            <div class="imagem-explicativa">
+                <img src="imagens/vazamento.webp" alt="Detalhe Vazamento">
+            </div>
+        </div>
+    </div>
 
-    <!-- ═══════════════════════ RODAPÉ ═══════════════════════ -->
-     <footer class="rodape">
+    <div class="secao-detalhe" id="detalhe-piscina">
+        <h1>Manutenção de Piscina</h1>
+        <div class="conteudo-detalhe">
+            <div class="texto-explicativo">
+                <p>A exposição direta ao sol e ao vento causa altas taxas de perda do volume de água por evaporação
+                    natural.</p>
+                <h3>Cuidados básicos:</h3>
+                <ul>
+                    <li><span class="destaque-azul">Proteção:</span> Cubra a piscina com capas térmicas ou plásticas
+                        enquanto estiver fora de uso.</li>
+                    <li><span class="destaque-azul">Filtragem:</span> Mantenha o tratamento químico em dia para evitar
+                        trocas completas de água.</li>
+                </ul>
+            </div>
+            <div class="imagem-explicativa">
+                <img src="imagens/piscina.jpg" alt="Detalhe Piscina">
+            </div>
+        </div>
+    </div>
+
+  <footer class="rodape">
     <div class="conteudo-rodape">
 
       <div class="rodape-logo">
@@ -250,7 +502,8 @@
     <p class="rodape-direitos">© 2026 EcoDrop. Todos os direitos reservados.</p>
   </footer>
 
-    <script src="../js/script_sobre.js"></script>
-	<script src="../js/script.js"></script>
+    <script src="js/script.js"></script>
+    <button id="btn-topo" class="botao-subir">&#10094;</button>
 </body>
+
 </html>
