@@ -123,11 +123,24 @@ function calcular() {
     resultado.style.display = "block";
 }
 
-const formularioContato = document.getElementById('enviar');
-const meuFormulario = document.getElementById('meuFormulario'); 
+document.addEventListener("DOMContentLoaded", function() {
+    const dicas = [
+        "Banho de 5 minutos economiza 90 litros de água!",
+        "Fechar a torneira ao escovar os dentes poupa 12 litros.",
+        "Conserte vazamentos: uma gota por segundo desperdiça 30 litros por dia.",
+        "Use a máquina de lavar apenas com a carga máxima.",
+        "Reaproveite a água da máquina de lavar para limpar o quintal.",
+        "Regue as plantas logo cedo ou à noite para evitar evaporação."
+    ];
 
-formularioContato.addEventListener('click', function(event) {
-    event.preventDefault();
-    alert('Mensagem enviada com sucesso!');
-	meuFormulario.reset(); 
+    const dicaContainer = document.getElementById('dica-container');
+
+    function trocarDica() {
+        if (dicaContainer) {
+            const dicaAleatoria = dicas[Math.floor(Math.random() * dicas.length)];
+            dicaContainer.innerHTML = `<h4>Dica EcoDrop:</h4><p>${dicaAleatoria}</p>`;
+        }
+    }
+    trocarDica();
+    setInterval(trocarDica, 8000);
 });
