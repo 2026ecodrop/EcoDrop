@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Economizar — EcoDrop</title>
   <link rel="stylesheet" href="../CSS/economizar.css">
-  
+  <link rel="stylesheet" href="../CSS/style.css">
+
 </head>
 
 <body>
 
-<header class="cabecalho">
+  <header class="cabecalho">
     <button class="menu-hamburger" id="btn-hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </button>
 
     <div class="logo">
-        <a href="../index.html"><img src="../imagens/logo.png" alt="Logo EcoDrop"></a>
+      <a href="../index.html"><img src="../imagens/logo.png" alt="Logo EcoDrop"></a>
     </div>
 
     <nav class="menu">
-        <ul id="menu-lista">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../paginas/sobre.html">Sobre</a></li>
-            <li id="economizar"><a href="../paginas/economizar.html">Economizar</a></li>
-            <li><a href="../paginas/contato.html">Contato</a></li>
-        </ul>
+      <ul id="menu-lista">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li id="economizar"><a href="economizar.html">Economizar</a></li>
+        <li><a href="contato.html">Contato</a></li>
+
+        <li class="item-dica">
+          <div class="menu-dica" id="dica-container"></div>
+        </li>
+      </ul>
     </nav>
-</header>
+    <button id="btn-escuro" title="Alternar Modo Escuro"><img src="/imagens/modo-escuro.png" alt=""></button>
+  </header>
 
 
   <div class="introducao">
@@ -80,7 +87,7 @@
           <p>
             A reutilização de água cinza — aquela proveniente de pias e chuveiros — por meio de sistemas
             de filtragem domésticos é outra solução crescente. Segundo a <strong>Agência Nacional de Águas
-            (ANA)</strong>, o reuso pode representar até 30% de economia no consumo residencial.
+              (ANA)</strong>, o reuso pode representar até 30% de economia no consumo residencial.
           </p>
         </div>
 
@@ -108,27 +115,34 @@
         <div class="inov-card">
           <span class="inov-icone">📡</span>
           <h4>IoT e Sensores Inteligentes</h4>
-          <p>Monitoramento do consumo em tempo real com detecção automática de vazamentos antes que o desperdício se torne significativo.</p>
+          <p>Monitoramento do consumo em tempo real com detecção automática de vazamentos antes que o desperdício se
+            torne significativo.</p>
         </div>
         <div class="inov-card">
           <span class="inov-icone">🛰️</span>
           <h4>Irrigação por Satélite</h4>
-          <p>Sistemas guiados por satélite e sensores de umidade do solo adaptam a irrigação ao clima local, reduzindo o consumo em até 50%.</p>
+          <p>Sistemas guiados por satélite e sensores de umidade do solo adaptam a irrigação ao clima local, reduzindo o
+            consumo em até 50%.</p>
         </div>
         <div class="inov-card">
           <span class="inov-icone">♻️</span>
           <h4>Reuso de Água Cinza</h4>
-          <p>Sistemas de filtragem domésticos aproveitam a água de pias e chuveiros para fins não potáveis como irrigação e limpeza.</p>
+          <p>Sistemas de filtragem domésticos aproveitam a água de pias e chuveiros para fins não potáveis como
+            irrigação e limpeza.</p>
         </div>
       </div>
 
       <div class="referencias">
         <h3>Referências</h3>
         <ul>
-          <li>FAO — <em>Aquastat: Water Use in Agriculture</em>, 2023. <a href="https://www.fao.org/aquastat" target="_blank" rel="noopener noreferrer">fao.org/aquastat</a></li>
-          <li>ANA — <em>Conjuntura dos Recursos Hídricos no Brasil</em>, 2023. <a href="https://www.gov.br/ana/pt-br" target="_blank" rel="noopener noreferrer">gov.br/ana</a></li>
-          <li>Embrapa — <em>Tecnologias para Irrigação Sustentável</em>. <a href="https://www.embrapa.br" target="_blank" rel="noopener noreferrer">embrapa.br</a></li>
-          <li>ONU-Água — <em>Water and Climate Change</em>, 2023. <a href="https://www.unwater.org" target="_blank" rel="noopener noreferrer">unwater.org</a></li>
+          <li>FAO — <em>Aquastat: Water Use in Agriculture</em>, 2023. <a href="https://www.fao.org/aquastat"
+              target="_blank" rel="noopener noreferrer">fao.org/aquastat</a></li>
+          <li>ANA — <em>Conjuntura dos Recursos Hídricos no Brasil</em>, 2023. <a href="https://www.gov.br/ana/pt-br"
+              target="_blank" rel="noopener noreferrer">gov.br/ana</a></li>
+          <li>Embrapa — <em>Tecnologias para Irrigação Sustentável</em>. <a href="https://www.embrapa.br"
+              target="_blank" rel="noopener noreferrer">embrapa.br</a></li>
+          <li>ONU-Água — <em>Water and Climate Change</em>, 2023. <a href="https://www.unwater.org" target="_blank"
+              rel="noopener noreferrer">unwater.org</a></li>
         </ul>
       </div>
 
@@ -312,7 +326,8 @@
         <span class="externo">↗ inpe.br</span>
       </a>
 
-      <a class="link-card" href="https://portalods.com.br/ods/ods-6-agua-potavel-e-saneamento/" target="_blank" rel="noopener noreferrer">
+      <a class="link-card" href="https://portalods.com.br/ods/ods-6-agua-potavel-e-saneamento/" target="_blank"
+        rel="noopener noreferrer">
         <span class="icone-link">🎯</span>
         <h3>ODS 6 — Água Potável e Saneamento</h3>
         <p>Objetivo da ONU: acesso universal à água limpa e ao saneamento básico até 2030.</p>
@@ -339,6 +354,9 @@
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="economizar.html">Economizar</a></li>
           <li><a href="contato.html">Contato</a></li>
+          <li class="item-dica">
+            <div class="menu-dica" id="dica-container"></div>
+          </li>
         </ul>
       </div>
 
@@ -355,6 +373,8 @@
   </footer>
 
 
-	<script src="../js/script.js"></script>
+  <script src="../js/script-economizar.js"></script>
+  <script src="../js/script.js"></script>
 </body>
+
 </html>

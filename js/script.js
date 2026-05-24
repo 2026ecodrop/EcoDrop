@@ -123,24 +123,60 @@ function calcular() {
     resultado.style.display = "block";
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+function inicializarDicas() {
     const dicas = [
         "Banho de 5 minutos economiza 90 litros de água!",
         "Fechar a torneira ao escovar os dentes poupa 12 litros.",
         "Conserte vazamentos: uma gota por segundo desperdiça 30 litros por dia.",
         "Use a máquina de lavar apenas com a carga máxima.",
         "Reaproveite a água da máquina de lavar para limpar o quintal.",
-        "Regue as plantas logo cedo ou à noite para evitar evaporação."
+        "Regue as plantas logo cedo ou à noite para evitar evaporação.",
+        "Arejadores nas torneiras cortam o desperdício pela metade.",
+        "Lave o carro com balde, não com mangueira.",
+        "Descongele alimentos na geladeira, nunca em água corrente.",
+        "Use balde para limpar calçadas, economize 200 litros.",
+        "Piscina coberta evita evaporação da água.",
+        "Verifique o hidrômetro para achar vazamentos invisíveis.",
+        "Ensaboe a louça com a torneira sempre fechada.",
+        "Economize 50% usando a máquina de lavar cheia."
     ];
 
     const dicaContainer = document.getElementById('dica-container');
 
-    function trocarDica() {
-        if (dicaContainer) {
+    if (dicaContainer) {
+        const trocarDica = () => {
             const dicaAleatoria = dicas[Math.floor(Math.random() * dicas.length)];
             dicaContainer.innerHTML = `<h4>Dica EcoDrop:</h4><p>${dicaAleatoria}</p>`;
-        }
+        };
+        trocarDica();
+        setInterval(trocarDica, 8000);
+    } else {
+        console.log("Aguardando o container da dica...");
     }
-    trocarDica();
-    setInterval(trocarDica, 8000);
+}
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', inicializarDicas);
+} else {
+    inicializarDicas();
+}
+document.addEventListener("DOMContentLoaded", function() {
+    
+    const btnEscuro = document.getElementById('btn-escuro');
+
+    if (localStorage.getItem('tema-ecodrop') === 'escuro') {
+        document.body.classList.add('modo-escuro');
+    }
+
+    if (btnEscuro) {
+        btnEscuro.addEventListener('click', () => {
+            document.body.classList.toggle('modo-escuro');
+
+            if (document.body.classList.contains('modo-escuro')) {
+                localStorage.setItem('tema-ecodrop', 'escuro');
+            } 
+            else {
+                localStorage.setItem('tema-ecodrop', 'claro');
+            }
+        });
+    }
 });

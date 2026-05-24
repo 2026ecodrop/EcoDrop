@@ -724,3 +724,69 @@ body {
         align-items: center;
     }
 }
+body.modo-escuro .introducao {
+    background-color: #1a1a1a !important;
+}
+
+body.modo-escuro .texto-inovacoes {
+    background: #242424 !important;
+    border-color: #333 !important;
+}
+
+body.modo-escuro .inovacoes-texto-principal,
+body.modo-escuro .inov-card,
+body.modo-escuro .referencias {
+    border-color: #333 !important;
+}
+
+body.modo-escuro .inovacoes-destaque-lateral {
+    background: #1a1a1a !important;
+}
+
+body.modo-escuro .stat-card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: #333 !important;
+}
+
+body.modo-escuro .referencias {
+    background: #1a1a1a !important;
+}
+
+body.modo-escuro .dica,
+body.modo-escuro .caixa-calculadora,
+body.modo-escuro .link-card,
+body.modo-escuro .resultado {
+    background-color: #242424 !important;
+    color: #ffffff !important;
+    border: 1px solid #333 !important;
+}
+
+body.modo-escuro .resultado {
+    border-left-color: #7ee8fa !important;
+}
+
+body.modo-escuro .inov-card h4,
+body.modo-escuro .dica h3,
+body.modo-escuro .link-card h3,
+body.modo-escuro .titulo-secao h2,
+body.modo-escuro .referencias h3 {
+    color: #ffffff !important;
+}
+
+body.modo-escuro .inovacoes-texto-principal p,
+body.modo-escuro .inov-card p,
+body.modo-escuro .referencias li,
+body.modo-escuro .dica p,
+body.modo-escuro .link-card p,
+body.modo-escuro .linha-campo label,
+body.modo-escuro .resultado p,
+body.modo-escuro .nota {
+    color: #e0e0e0 !important;
+}
+
+body.modo-escuro .linha-campo input {
+    background-color: #333 !important;
+    color: #fff !important;
+    border-color: #555 !important;
+}
+

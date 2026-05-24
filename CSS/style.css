@@ -68,6 +68,124 @@ body {
     color: white;
 }
 
+
+#btn-escuro {
+    background: white !important;
+    border: none !important;
+    padding: 0 !important;
+    cursor: pointer;
+    font-size: 0;
+    position: absolute;
+    right: 50px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    outline: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#btn-escuro:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+#btn-escuro img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    #btn-escuro {
+        right: 20px;
+        top: 20px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    #btn-escuro img {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+
+body.modo-escuro {
+    background-color: #121212 !important;
+    color: #f1f1f1 !important;
+}
+body.modo-escuro .containerTexto,
+body.modo-escuro .dica,
+body.modo-escuro .link-card,
+body.modo-escuro .caixa-calculadora,
+body.modo-escuro .formulario,
+body.modo-escuro .card-equipamento,
+body.modo-escuro .resultado {
+    background-color: #242424 !important;
+    color: #ffffff !important;
+    border: 1px solid #333 !important;
+}
+
+body.modo-escuro p,
+body.modo-escuro li,
+body.modo-escuro h1,
+body.modo-escuro h2,
+body.modo-escuro h3,
+body.modo-escuro label,
+body.modo-escuro .texto-explicativo p,
+body.modo-escuro .info-contato p,
+body.modo-escuro .detalhes-contato p {
+    color: #e0e0e0 !important;
+}
+
+body.modo-escuro .destaque-preto {
+    color: #7ee8fa !important;
+}
+
+body.modo-escuro input,
+body.modo-escuro select,
+body.modo-escuro textarea {
+    background-color: #333 !important;
+    color: white !important;
+    border: 1px solid #555 !important;
+}
+
+body.modo-escuro .cabecalho,
+body.modo-escuro .menu ul {
+    background-color: #1a1a1a !important; 
+}
+
+body.modo-escuro .menu a {
+    background-color: #333 !important;
+    color: #ffffff !important;
+}
+
+body.modo-escuro .menu a:hover {
+    background-color: #555 !important;
+    color: #ffffff !important;
+}
+
+body.modo-escuro #home a,
+body.modo-escuro #economizar a,
+body.modo-escuro #contato a, 
+body.modo-escuro #sobre a{
+    background-color: #8f8f8f !important; 
+    border: 1px solid #666 !important;
+}
+
+
+
+
+
+
+
+
+
 .container-banner {
     width: 100%;
 	background-image: url('../imagens/banneratras.jpg');
@@ -151,65 +269,6 @@ body {
     width: 95%;
     max-width: 1200px;
 }
-
-
-
-
-
-.menu-dica {
-    margin-top: 30px;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    border-top: 2px solid rgba(255, 255, 255, 0.2);
-    color: #ffffff;
-    text-align: center;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    width: 100%;
-}
-
-.menu-dica h4 {s
-    color: #ffffff;
-    font-size: 14px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.menu-dica p {
-    color: #ffffff;
-    font-size: 13px;
-    line-height: 1.4;
-    padding: 0 10px;
-}
-
-
-.menu-github {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.menu-github a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    background: transparent;
-    padding: 10px;
-}
-
-.icone-github {
-    width: 24px;
-    height: 24px;
-    background-color: white; /* Se o ícone for transparente, o fundo branco ajuda */
-    border-radius: 50%;
-}
-
-
-
 
 
 
@@ -539,13 +598,49 @@ html {
     display: none;
 }
 
+.menu-dica, .item-dica {
+    display: none !important;
+}
+
+
+
 @media (max-width: 768px) {
-    .cabecalho {
-        position: relative;
-        justify-content: center !important;
-        flex-direction: row !important;
-        height: 80px;
+
+.menu ul.menu-ativo .item-dica {
+        display: block !important;
+        width: 100%;
     }
+
+    .menu ul.menu-ativo .menu-dica {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+        text-align: center;
+        width: 85%;
+        margin: 20px auto 0 auto;
+        border-radius: 8px;
+    }
+
+    .menu-dica h4 {
+        font-size: 15px;
+        margin-bottom: 5px;
+        width: 100%;
+    }
+
+    .menu-dica p {
+        font-size: 13px;
+        line-height: 1.4;
+        width: 100%;
+        word-wrap: break-word; /* Evita que o texto quebre o layout */
+    }
+
+
+
 
     .menu-hamburger {
         display: block;

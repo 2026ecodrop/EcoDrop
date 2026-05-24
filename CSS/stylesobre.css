@@ -314,4 +314,49 @@ body {
     top: 0;
     bottom: 0;
     width: 3px;
-    background: linear-gradient(to bottom, var(--azul-
+    background: linear-gradient(to bottom, var(--azul- ))
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+
+    background: linear-gradient(to bottom, var(--azul-primario), transparent);
+}
+
+
+body.modo-escuro .hero-sobre {
+    background: #1a1a1a !important;
+}
+
+body.modo-escuro .card-mvv,
+body.modo-escuro .dado-item,
+body.modo-escuro .card-membro {
+    background-color: #242424 !important;
+    border: 1px solid #333 !important;
+}
+
+body.modo-escuro .card-mvv.destaque {
+    background-color: var(--azul-escuro) !important;
+    border-color: var(--azul-escuro) !important;
+}
+
+body.modo-escuro .hero-tag,
+body.modo-escuro .cargo-membro {
+    background-color: #333 !important;
+    color: #7ee8fa !important; 
+}
+
+body.modo-escuro .dado-numero {
+    color: #7ee8fa !important;
+}
+
+body.modo-escuro .card-mvv h3,
+body.modo-escuro .card-membro h3,
+body.modo-escuro .containerTexto h2 {
+    color: #ffffff !important;
+}
