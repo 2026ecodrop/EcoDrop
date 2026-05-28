@@ -1,8 +1,11 @@
-const formularioContato = document.getElementById('enviar');
-const meuFormulario = document.getElementById('meuFormulario'); 
+const form = document.getElementById('formContato');
+const mensagem = document.getElementById('mensagem');
 
-formularioContato.addEventListener('click', function(event) {
+form.addEventListener('submit', function(event) {
     event.preventDefault();
-    alert('Mensagem enviada com sucesso!');
-	meuFormulario.reset(); 
+    mensagem.classList.add('ativo');
+    form.reset();
+    setTimeout(() => {
+        mensagem.classList.remove('ativo');
+    }, 3500);
 });
