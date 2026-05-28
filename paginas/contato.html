@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - EcoDrop</title>
+    <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/contato.css">
 </head>
 
@@ -18,84 +19,98 @@
         </button>
 
         <div class="logo">
-            <a href="../index.html"><img src="../imagens/logo.png" alt="Logo EcoDrop"></a>
+            <a href="../index.html">
+                <img src="../imagens/logo.png" alt="Logo EcoDrop">
+            </a>
         </div>
 
         <nav class="menu">
             <ul id="menu-lista">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="economizar.html">Economizar</a></li>
+		<li><a href="sobre.html">Sobre</a></li>
+		<li><a href="economizar.html">Economizar</a></li>
                 <li id="contato"><a href="contato.html">Contato</a></li>
-
-                <li class="item-dica">
-                    <div class="menu-dica" id="dica-container"></div>
-                </li>
             </ul>
         </nav>
-         <button id="btn-escuro" title="Alternar Modo Escuro"><img src="../imagens/modo-escuro.png" alt=""></button>
+
+        <button id="btn-escuro" title="Alternar Modo Escuro">
+            <img src="../imagens/modo-escuro.png" alt="">
+        </button>
     </header>
 
-    <section class="banner-contato">
-        <div class="banner-conteudo">
-            <h1>Fale Conosco</h1>
-            <p>Estamos aqui para ajudar você a economizar e preservar o futuro.</p>
+    <div class="pagina-contato">
+        <div class="container-contato">
+
+            <h1>Entre em Contato</h1>
+            <p class="subtitulo-contato">Tem uma sugestão ou quer denunciar desperdício? Fale com a gente!</p>
+            <hr class="divisor-form">
+
+            <form class="form-contato" id="formContato">
+
+                <div class="form-linha">
+                    <div class="form-grupo">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="seu@email.com" required>
+                    </div>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="tipo">Tipo de Contato</label>
+                    <select id="tipo" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="sugestao">Sugestão</option>
+			<option value="duvida">Dúvida geral</option>
+			<option value="parceria">Proposta de parceria</option>
+			<option value="problema">Problemas técnicos</option>
+                        <option value="denuncia">Denúncia</option>
+			<option value="outros">Outros assuntos...</option>
+                    </select>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="comentario">Comentário</label>
+                    <textarea id="comentario" placeholder="Descreva sua mensagem aqui..." required></textarea>
+                </div>
+		
+		<div class="btn-container">
+                <button type="submit" class="btn-enviar">Enviar</button>
+		<button type="reset" class="btn-apagar">Apagar</button>
+		
+		</div>
+            </form>
+
+            <div class="info-rodape-form">
+                <div class="info-item">
+                    <span class="icone">💧</span>
+                    <span>Projeto EcoDrop</span>
+                </div>
+                <div class="info-item">
+                    <span class="icone">🌱</span>
+                    <span>Uso consciente da água</span>
+                </div>
+                <div class="info-item">
+                    <span class="icone">📬</span>
+                    <span>Resposta em até 48h</span>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
 
-    <main class="container-contato">
-        <div class="info-contato">
-            <h2>Entre em Contato</h2>
-            <p>Tem alguma dúvida, sugestão ou quer ser um parceiro do EcoDrop? Preencha o formulário ao lado e a nossa
-                equipe entrará em contato o mais rápido possível!</p>
-            <div class="detalhes-contato">
-                <p><strong>E-mail:</strong> 2026ecodrop@gmail.com</p>
-            </div>
-        </div>
-
-        <form class="formulario" id="meuFormulario">
-            <div class="campo">
-                <label for="nome">Nome Completo</label>
-                <input type="text" id="nome" placeholder="Digite seu nome" required>
-            </div>
-
-            <div class="campo">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" placeholder="Digite seu melhor e-mail" required>
-            </div>
-
-            <div class="campo">
-                <label for="assunto">Assunto</label>
-                <select id="assunto" required>
-                    <option value="" disabled selected>Selecione um assunto...</option>
-                    <option value="duvida">Dúvida geral</option>
-                    <option value="sugestao">Sugestão de melhoria</option>
-                    <option value="parceria">Proposta de parceria</option>
-                    <option value="suporte">Problema no site</option>
-                    <option value="outros">Outro assunto</option>
-                </select>
-            </div>
-
-            <div class="campo">
-                <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" rows="6" placeholder="Escreva sua mensagem aqui..." required></textarea>
-            </div>
-
-            <div class="botoes-form">
-                <button id="enviar" type="submit" class="btn-enviar">Enviar Mensagem</button>
-                <button type="reset" class="btn-apagar">Apagar</button>
-            </div>
-        </form>
-    </main>
+    <div class="mensagem-sucesso" id="mensagem">
+        ✅ Mensagem enviada com sucesso!
+    </div>
 
     <footer class="rodape">
         <div class="conteudo-rodape">
-
             <div class="rodape-logo">
                 <h3>EcoDrop</h3>
                 <p>Preservando o futuro gota a gota.</p>
             </div>
-
             <div class="rodape-links">
                 <h4>Navegação</h4>
                 <ul>
@@ -105,7 +120,6 @@
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </div>
-
             <div class="rodape-links">
                 <h4>Sobre o Projeto</h4>
                 <p style="font-size: 14px; color: #d9d9d9; line-height: 1.6;">
@@ -113,14 +127,13 @@
                     da água e a importância da sustentabilidade.
                 </p>
             </div>
-
         </div>
         <p class="rodape-direitos">© 2026 EcoDrop. Todos os direitos reservados.</p>
     </footer>
 
     <script src="../js/script.js"></script>
     <script src="../js/script-contato.js"></script>
-    <button id="btn-topo" class="botao-subir">&#10094;</button>
+
 </body>
 
 </html>
