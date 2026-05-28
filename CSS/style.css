@@ -34,15 +34,20 @@ body {
     flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .menu ul {
     list-style: none;
     display: flex;
     gap: 40px;
+    align-items: center;
 }
 
 .menu a {
+    height: 30px;
+    line-height: 10px;
+    text-align: center;
     text-decoration: none;
     color: #333;
     background-color: white;
@@ -50,22 +55,31 @@ body {
     border-radius: 25px;
     font-weight: bold;
     font-size: 14px;
-    transition: background-color 0.2s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    align-items: center;
 }
 
 #home a {
     background-color: #5155cb;
     color: white;
+    
+    
 }
 
 #home a:hover {
     background-color: #FFFFFF;
     color: #333;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px) scale(1.05);
 }
 
 .menu a:hover {
     background-color: #5155cb;
     color: white;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -90,7 +104,7 @@ body {
 
 #btn-escuro:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4);
 }
 
 #btn-escuro img {
@@ -158,6 +172,7 @@ body.modo-escuro textarea {
 body.modo-escuro .cabecalho,
 body.modo-escuro .menu ul {
     background-color: #1a1a1a !important; 
+    
 }
 
 body.modo-escuro .menu a {
@@ -168,6 +183,7 @@ body.modo-escuro .menu a {
 body.modo-escuro .menu a:hover {
     background-color: #555 !important;
     color: #ffffff !important;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
 body.modo-escuro #home a,
