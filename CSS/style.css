@@ -192,7 +192,7 @@ body.modo-escuro #contato a,
 body.modo-escuro #sobre a{
     background-color: #8f8f8f !important; 
     border: 1px solid #666 !important;
-	box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4);
 }
 
 
@@ -629,7 +629,10 @@ html {
     }
 
     .menu ul.menu-ativo .menu-dica {
-        display: flex !important;
+        display: flex !important;   
+        height: 100px;
+        line-height: 10px;
+        text-align: center;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -653,7 +656,7 @@ html {
         font-size: 13px;
         line-height: 1.4;
         width: 100%;
-        word-wrap: break-word; 
+        word-wrap: break-word; /* Evita que o texto quebre o layout */
     }
 
 
@@ -708,9 +711,12 @@ html {
     }
 
     .menu a {
+        height: 30px;
+        width: 130px;
+        line-height: 5px;
+        text-align: center;
         display: block;
         text-align: left;
-        width: 85%;
         margin: 0 auto;
         padding: 12px 20px;
         border-radius: 5px;
@@ -795,14 +801,14 @@ html {
         display: flex;
         flex-direction: column;
         position: fixed;
-        top: 80px;
+        top: 80px; /* IMPORTANTE: Começa logo abaixo do cabeçalho (80px) */
         left: -250px;
         width: 250px;
-        height: calc(100vh - 80px); 
+        height: calc(100vh - 80px); /* Ajusta a altura para não cobrir o topo */
         background-color: #0067A7;
         padding-top: 20px;
         gap: 20px;
-        z-index: 999;
+        z-index: 999; /* Garante que fica por cima de tudo */
         transition: left 0.3s ease;
     }
 
